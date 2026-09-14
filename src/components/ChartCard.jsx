@@ -18,7 +18,7 @@ const currency = new Intl.NumberFormat("en-IN", {
 
 export function ChartCard({ categoryData }) {
   return (
-    <section className="min-h-[20rem] rounded-2xl border border-stone-200 bg-white p-5 shadow-sm sm:p-7">
+    <section className="min-h-80 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm sm:p-7">
       <div className="mb-3">
         <p className="text-lg font-bold">Spending by category</p>
         <p className="mt-1 text-sm text-stone-500">Your expense breakdown at a glance.</p>
