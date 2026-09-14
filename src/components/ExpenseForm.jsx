@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Input } from "./input";
-import { button } from "./button";
+import { Input } from "./Input";
+import { Button } from "./Button";
 
 export function ExpenseForm({ onAddTransaction }) {
   const [type, setType] = useState("expense");
