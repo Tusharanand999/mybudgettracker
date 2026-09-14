@@ -4,13 +4,21 @@ import { ChartCard } from "./components/ChartCard";
 import { ExpenseForm } from "./components/ExpenseForm";
 import { Navbar } from "./components/Navbar";
 
+function createTransactionId() {
+  if (typeof crypto !== "undefined" && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+
+  return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
 function App() {
   const [transactions, setTransactions] = useState([]);
 
   function addTransaction(transaction) {
     setTransactions((currentTransactions) => [
       ...currentTransactions,
-      { ...transaction, id: crypto.randomUUID() },
+      { ...transaction, id: createTransactionId() },
     ]);
   }
 
